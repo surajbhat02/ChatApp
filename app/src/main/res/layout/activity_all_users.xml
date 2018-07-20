@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AllUsersActivity">
+
+    <include
+        layout="@layout/app_bar_layout"
+        android:id="@+id/all_users_app_bar"></include>
+
+    <!--<ListView
+        android:id="@+id/allUsersList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:layout_below="@+id/all_users_app_bar"/>-->
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/allUsersList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/all_users_app_bar">
+
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

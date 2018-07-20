@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    tools:context=".ChatActivity">
+
+    <include
+        android:id="@+id/chat_bar_layout"
+        layout="@layout/app_bar_layout"></include>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/messageListOfUsers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/messageBoxLayout"
+        android:layout_below="@+id/chat_bar_layout">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <LinearLayout
+        android:id="@+id/messageBoxLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/background_light"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <ImageButton
+            android:id="@+id/ibSendImage"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:src="@drawable/ic_select_image_to_send" />
+
+        <EditText
+            android:id="@+id/etSendMessage"
+            android:layout_width="289dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Write Message..."
+            android:inputType="textMultiLine" />
+
+        <ImageButton
+            android:id="@+id/ibSendMessage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="7dp"
+            android:src="@drawable/ic_send_message" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
